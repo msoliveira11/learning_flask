@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{pet["name"]}}'s Details - Paws Rescue Center
+{% endblock %}
+
+{% block content %}
+<div style="float:left; border-style:double;">
+  <img src="{{url_for('static', filename = pet["id"]|string+".jpg")}}" height="400" >
+</div>
+<div style="float:left; margin:10px;">
+  <h1 class="title">{{pet.name}}</h1>
+  <p><b>Age: &nbsp;</b>{{pet.age}}</p>
+  <p><b>Bio: &nbsp;</b>{{pet.bio}}</p>
+</div>
+{% endblock %}
+
+
+<!-- !DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
+    <title>{{pet["name"]}}'s Details - Paws Rescue Center</title>
+</head>
+<body style="margin:2%">
+<div style="float:left; border-style:double;">
+  <img src="{{url_for('static', filename = pet["id"]|string+".jpg")}}" height="400" >
+</div>
+<div style="float:left; margin:10px;">
+  <h1 class="title">{{pet.name}}</h1>
+  <p><b>Age: &nbsp;</b>{{pet.age}}</p>
+  <p><b>Bio: &nbsp;</b>{{pet.bio}}</p>
+</body -->
